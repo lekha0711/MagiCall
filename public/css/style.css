@@ -544,7 +544,7 @@ navbar .logo {
   margin: 0 auto;
   display: flex;
   margin-top: 50px;
-  width: 260px;
+  width: 300px;
   background-color: #ffffff;
   border-radius: 10px;
   padding: 10px;
@@ -580,10 +580,10 @@ navbar .logo {
   background-color: #393e46;
 }
 .container-room .left-cont .footer .utils .screenshare {
-  background-color: #d8d8d8;
+  background-color: #4e5fcc;
   text-align: center;
   margin-left: 10px;
-  color: #393e46;
+  color:white;
   padding: 10px;
   height: 40px;
   width: 40px;
@@ -597,9 +597,9 @@ navbar .logo {
   background-color: #393e46;
 }
 .container-room .left-cont .footer .utils .board-icon {
-  background-color: #d8d8d8;
+  background-color: #4e5fcc;
   text-align: center;
-  color: #393e46;
+  color:white;
   margin-left: 10px;
   padding: 10px;
   height: 40px;
@@ -614,7 +614,7 @@ navbar .logo {
   background-color: #393e46;
 }
 .container-room .left-cont .footer .utils .cutcall {
-  background-color: #cc4e4e;
+  background-color: #4e5fcc;
   text-align: center;
   margin-left: 10px;
   color: white;
@@ -882,5 +882,32 @@ navbar .logo {
   color: #007bff;
   text-decoration: none;
 }
+
+.record-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.record-button .fas {
+  background-color: #4e5fcc;
+  text-align: center;
+  margin-left: 10px;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  transition: background-color 0.3s;
+  transition: color 0.3s;
+  font-size: 20px;
+  color: red;
+}
+
+
+.record-button:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 /*# sourceMappingURL=style.css.map */
