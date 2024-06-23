@@ -740,7 +740,7 @@ videoButt.addEventListener('click', () => {
         }
         videoButt.innerHTML = `<i class="fas fa-video"></i>`;
         videoAllowed = 1;
-        videoButt.style.backgroundColor = "#4ECCA3";
+        videoButt.style.backgroundColor = "#4e5fcc";
         if (mystream) {
             mystream.getTracks().forEach(track => {
                 if (track.kind === 'video')
@@ -782,7 +782,7 @@ audioButt.addEventListener('click', () => {
         }
         audioButt.innerHTML = `<i class="fas fa-microphone"></i>`;
         audioAllowed = 1;
-        audioButt.style.backgroundColor = "#4ECCA3";
+        audioButt.style.backgroundColor = "#4e5fcc";
         if (mystream) {
             mystream.getTracks().forEach(track => {
                 if (track.kind === 'audio')
@@ -827,6 +827,8 @@ whiteboardButt.addEventListener('click', () => {
     else {
         whiteboardCont.style.visibility = 'visible';
         boardVisisble = true;
+        const msg=username+" started using the Whiteboard"
+        socket.emit('message', msg, 'Bot', roomid);
     }
 })
 
@@ -895,11 +897,11 @@ uploadFileButton.addEventListener('click', () => {
 fileInput.addEventListener('change', (event) => {
     const file = event.target.files[0];
     const reader = new FileReader();
-    console.log("File Input"); ///
+    console.log("File Input"); 
     reader.onload = function(e) {
       const arrayBuffer = e.target.result;
       const fileName = file.name;
-      const sender = username; // Replace this with the actual sender's name
+      const sender = username; 
       const options = { hour: 'numeric', minute: 'numeric', hour12: true };
       const timestamp = new Date().toLocaleTimeString([],options);
       socket.emit('file-upload', { file: arrayBuffer, fileName, sender, timestamp });
@@ -914,7 +916,6 @@ socket.on('file-received', (data) => {
 
   const fileMessage = document.createElement('div');
   fileMessage.className = 'chat-message file';
-
   const fileLink = document.createElement('a');
   const blob = new Blob([new Uint8Array(file)], { type: 'application/octet-stream' });
   const url = URL.createObjectURL(blob);
@@ -922,7 +923,6 @@ socket.on('file-received', (data) => {
   fileLink.download = fileName;
   fileLink.textContent = fileName;
   fileMessage.appendChild(fileLink);
-
 
   chatRoom.scrollTop = chatRoom.scrollHeight;
     chatRoom.innerHTML += `<div class="message">
@@ -936,7 +936,6 @@ socket.on('file-received', (data) => {
      `;
     chatRoom.appendChild(fileMessage);
 });
-// rest of your code...
 
 
 

@@ -732,6 +732,9 @@ navbar .logo {
   margin-top: 5px;
   font-size: 0.9rem;
 }
+.message .content{
+  color: black;
+} 
 .container-room .right-cont .chat-input-cont {
   padding: 12px;
   display: flex;
@@ -762,7 +765,7 @@ navbar .logo {
   height: 36px;
   padding: 5px 20px;
   border: none;
-  background-color:#393e46;
+  background-color:#88a5d4;
   color: #4e5fcc;
   font-weight: bold;
   font-size: 0.85rem;
@@ -847,6 +850,7 @@ navbar .logo {
 .chat-message.file strong {
   display: block;
   margin-bottom: 5px;
+  color: black;
 }
 .upload-file-button {
   color: #4e5fcc;
