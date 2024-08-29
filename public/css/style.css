@@ -147,7 +147,7 @@ navbar .logo {
 .main .video-cont {
   width: 100%;
   text-align: center;
-  transform: scaleX(-1);
+  /* transform: scaleX(-1); */
 }
 .main .video-cont .video-self {
   height: 400px;
@@ -456,7 +456,7 @@ navbar .logo {
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
-  transform: scaleX(-1);
+  /* transform: scaleX(-1); */
 
 }
 .container-room .left-cont .video-cont .video-box .nametag {
@@ -507,7 +507,7 @@ navbar .logo {
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
-  transform: scaleX(-1);
+  /* transform: scaleX(-1); */
 }
 .container-room .left-cont .video-cont-single .video-box .nametag {
   color: white;
